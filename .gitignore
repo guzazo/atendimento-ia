@@ -216,3 +216,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# ==========================================
+# Configurações Extra: Portfólio IA & n8n
+# ==========================================
+
+# Arquivos de credenciais locais manuais do Mercado Livre
+credentials.json
+client_secret.txt
+tokens.json
+
+# Diretórios locais de execução do n8n (caso rode via Docker/Local)
+.n8n/
+node_modules/
+
+# Arquivos do sistema operacional macOS (já que você está no Safari/Mac)
+.DS_Store
