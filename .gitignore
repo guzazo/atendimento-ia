@@ -227,9 +227,53 @@ credentials.json
 client_secret.txt
 tokens.json
 
+# Backups e variantes desses arquivos. O padrao acima nao pega
+# "tokens.json.bak-20260805", por isso os curingas abaixo.
+credentials.json*
+client_secret.txt*
+tokens.json*
+*.bak
+*.bak-*
+*token*.json
+*secret*
+
 # Diretórios locais de execução do n8n (caso rode via Docker/Local)
+# ATENÇÃO: n8n/ (sem ponto) é o N8N_USER_FOLDER deste projeto e contém
+# n8n/config (encryptionKey) e n8n/database.sqlite (credenciais OAuth do ML).
+# NUNCA versionar.
 .n8n/
+n8n/
 node_modules/
+
+# Dados coletados da conta ML (dados de negócio, podem conter info sensível)
+ml_pipeline/dados_conta.json
+ml_pipeline/dados_conta.json*
+output.json
+database.sqlite
 
 # Arquivos do sistema operacional macOS (já que você está no Safari/Mac)
 .DS_Store
+
+# ==========================================
+# Conteúdo local que NUNCA vai para o público
+# ==========================================
+# Perfis pessoais e skills privadas
+*.skill
+RETOMAR_AQUI.md
+
+# Dados e análises de uma conta real (negócio, preço, conversão)
+analise_anuncios_ml.csv
+dados_completos_analise_ml.md
+plano_acao_ml.md
+plano_acao_37_anuncios.md
+plano_evolucao_ml.md
+pipeline_n8n_correcao.md
+curva180_otimizado.md
+evomig_otimizado.md
+ml_pipeline/saida/
+
+# Conteúdo da Central de Aprendizagem do Mercado Livre (material de terceiro)
+ml_pipeline/regras_central.md
+
+# Variáveis locais da conta usadas pelo analista.py
+*.env
